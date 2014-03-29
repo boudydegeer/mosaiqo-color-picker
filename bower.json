@@ -5,7 +5,7 @@
     "Boudy de Geer <boudydegeer@mosaiqo.com>"
   ],
   "description": "A simple color picker web component to reuse anywhere",
-  "main": "color-picker.html",
+  "main": "index.html",
   "keywords": [
     "color",
     "color-picker",
