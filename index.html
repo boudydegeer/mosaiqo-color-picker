@@ -1,3 +1,4 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
 <polymer-element name="mosaiqo-color-picker" attributes="color name image" noscript>
   <template>
   	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -10,103 +11,107 @@
 		  		<input type="hidden" name="color" id="colorValue" value=""/>
 		  	</button>
 		  </div>
-
 		  <div id="picker" class="closed">
-		  	<span class="color" style="background:white" data-color="white" data-name="Blanco" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:black" data-color="black" data-name="Negro" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#9b9b9b" data-color="#9b9b9b" data-name="Gris" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#cecfcf" data-color="#cecfcf" data-name="Gris claro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#626261" data-color="#626261" data-name="Gris oscuro" on-click="{{selectColor}}"></span>
-				<hr/>
-		  	<span class="color" style="background:#faec37;" data-color="#faec37" data-name="Amarillo" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#fcf59e;" data-color="#fcf59e" data-name="Amarillo claro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#fbf061;" data-color="#fbf061" data-name="Amarillo medio" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#faec37;" data-color="#faec37" data-name="Amarillo fuerte" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#589de0;" data-color="#589de0" data-name="Azul" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#9bcef2;" data-color="#9bcef2" data-name="Azul claro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#86c0bb;" data-color="#86c0bb" data-name="Azul turquesa" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#5872b4;" data-color="#5872b4" data-name="Azul oscuro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#305593;" data-color="#305593" data-name="Azul ultramar" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#305593;" data-color="#305593" data-name="Azul marino" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#c10015" data-color="#c10015" data-name="Rojo" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#751302" data-color="#751302" data-name="Granate" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#d3721b" data-color="#d3721b" data-name="Naranja" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#dc9022" data-color="#dc9022" data-name="Naranja claro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#cd5919" data-color="#cd5919" data-name="Naranja fuerte" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#e7b035" data-color="#e7b035" data-name="Ambar dorado" on-click="{{selectColor}}"></span>
-				<hr/>
-		  	<span class="color" style="background:#68a23f" data-color="#68a23f" data-name="Verde" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#c9d231" data-color="#c9d231" data-name="Verde pistacho" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#8bb53a" data-color="#8bb53a" data-name="Verde hierba" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#48803d" data-color="#48803d" data-name="Verde navidad" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#67aa6a" data-color="#67aa6a" data-name="Verde oscuro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#86c0bb" data-color="#86c0bb" data-name="Verde turquesa" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#945799" data-color="#945799" data-name="Violeta" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#c1aad0" data-color="#c1aad0" data-name="Violeta claro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#49317c" data-color="#49317c" data-name="Violeta fuerte" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#c1aad0" data-color="#c1aad0" data-name="Lila" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#dd9dc1" data-color="#dd9dc1" data-name="Rosa" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#d06aa1" data-color="#d06aa1" data-name="Rosa fuerte" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#bf2b82" data-color="#bf2b82" data-name="Fuchsia" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#c40079" data-color="#c40079" data-name="Magenta" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#74524b" data-color="#74524b" data-name="Marrón" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#8e786d" data-color="#8e786d" data-name="Marrón claro" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#74524b" data-color="#74524b" data-name="Marrón fuerte" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#5a471b" data-color="#5a471b" data-name="Chocolate" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background:#95502e" data-color="#95502e" data-name="Terracota" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#e9cd30" data-color="#e9cd30" data-name="Whisky" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background-image:linear-gradient(to bottom right, #989a99 0%, #c5c6c5 40%,#c5c6c5 60%, #989a99 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #989a99 0%, #c5c6c5 40%,#c5c6c5 60%, #989a99 100% )" data-name="Plata" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background-image:linear-gradient(to bottom right, #c1c2c4 0%, #e8eaec 40%,#e8eaec 60%, #c1c2c4 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #c1c2c4 0%, #e8eaec 40%,#e8eaec 60%, #c1c2c4 100% )" data-name="Plata brillo" on-click="{{selectColor}}"></span>
-	  		<span class="color" style="background-image:linear-gradient(to bottom right, #8d9496 0%, #b2babc 40%,#b2babc 60%, #8d9496 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #8d9496 0%, #b2babc 40%,#b2babc 60%, #8d9496 100% )" data-name="Plata Mate" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background:#ad4b2e" data-color="#ad4b2e" data-name="Bronce" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background-image:linear-gradient(to bottom right, #ad781c 0%, #dd9924 40%,#dd9924 60%, #ad781c 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #ad781c 0%, #dd9924 40%,#dd9924 60%, #ad781c 100% )" data-name="Cobre" on-click="{{selectColor}}"></span>
-				<hr/>
-		  	<span class="color" style="background:#dfb32a" data-color="#dfb32a" data-name="Ocre" on-click="{{selectColor}}"></span>
-		  	<hr/>
-		  	<span class="color" style="background-image:linear-gradient(to bottom right, #b8a865 0%, #e7d27e 40%,#e7d27e 60%, #b8a865 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #b8a865 0%, #e7d27e 40%,#e7d27e 60%, #b8a865 100% )" data-name="Oro" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#e9cd30" data-color="#e9cd30" data-name="Oro viejo" on-click="{{selectColor}}"></span>
-		  	<span class="color" style="background-image:linear-gradient(to bottom right, #b29b54 0%, #d8bb65 40%,#d8bb65 60%, #b29b54 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #b29b54 0%, #d8bb65 40%,#d8bb65 60%, #b29b54 100% )" data-name="Oro brillo" on-click="{{selectColor}}"></span>	
-		  	<hr/>
-		  	<span class="color" style="background-image:linear-gradient(to bottom right, #83743d 0%, #a08e4a 40%,#a08e4a 60%, #83743d 100% )" data-image="true"
-		  		data-color="linear-gradient(to bottom right, #83743d 0%, #a08e4a 40%,#a08e4a 60%, #83743d 100% )" data-name="Oro mate" on-click="{{selectColor}}"></span>	
-				<hr/>
-				<span class="color" style="background:#f3e8be" data-color="#f3e8be" data-name="Natural" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#f3e8be" data-color="#f3e8be" data-name="Marfil" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#f8e9d2" data-color="#f8e9d2" data-name="Crema" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#f2d5b6" data-color="#f2d5b6" data-name="Salmón" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#eee6d0" data-color="#eee6d0" data-name="Vainilla" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#edc7a2" data-color="#edc7a2" data-name="Carne" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#8e786d" data-color="#8e786d" data-name="Avellana" on-click="{{selectColor}}"></span>
-				<hr/>
-				<span class="color" style="background-image:linear-gradient(to right, #c73a18 0%, #f9ea37 20%,#bccc30 40%, #9cceef 60%, #363386 80%, #b4007b 100% )" data-image="true"
-		  		data-color="linear-gradient(to right, #c73a18 0%, #f9ea37 20%,#bccc30 40%, #9cceef 60%, #363386 80%, #b4007b 100% )" data-name="Arcoiris" on-click="{{selectColor}}"></span>
-				<hr/>
-				<span class="color" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDY1MDk2RkFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDY1MDk3MEFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENjUwOTZEQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENjUwOTZFQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b2m0NQAAAVtJREFUeNrslstOwzAQRe2xnTYk4aFW/P+PIHZ8BhIbEAv6wiqt7RkzDuqiiZG6IRKSZ5FNxj6e6yj3yseHJ1OpuqlAyUhRXFCmMruNfXl+227XeoZC8CopLi49rw3DJC+JUUxSum4Ms2IqMRGSaCrUqUBMXgVZkAVZkAX5h06i1K/U5KI56zVGKQ0A6T0/f3oHPcR2n0wxhzwefJYXk2fHrG97Ew77Y/CIGIWnbCqAdCTIiqjfX3fZ+YIPznnCMD4q7+acs5/2sHdk0zR9qjjNR8QNXdfVbXvS4BzZtLMxj1s3K2t31uOXABwNISPrBljVQDTcFFEopbrrdrFccqpKkepcKr24bzOaKAjBrT5QkAcdsrelWTeh5GgMRJmQN7Pbu2Z+pbWBQfDQiDS8xT4K9X38+cj+q87o0x89k5h4oZQRiXjnEIgVGSDLr6AgC7IgC7Ig/x3yW4ABAFzFn1mmK4c+AAAAAElFTkSuQmCC)"
-				 data-color="url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDY1MDk2RkFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDY1MDk3MEFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENjUwOTZEQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENjUwOTZFQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b2m0NQAAAVtJREFUeNrslstOwzAQRe2xnTYk4aFW/P+PIHZ8BhIbEAv6wiqt7RkzDuqiiZG6IRKSZ5FNxj6e6yj3yseHJ1OpuqlAyUhRXFCmMruNfXl+227XeoZC8CopLi49rw3DJC+JUUxSum4Ms2IqMRGSaCrUqUBMXgVZkAVZkAX5h06i1K/U5KI56zVGKQ0A6T0/f3oHPcR2n0wxhzwefJYXk2fHrG97Ew77Y/CIGIWnbCqAdCTIiqjfX3fZ+YIPznnCMD4q7+acs5/2sHdk0zR9qjjNR8QNXdfVbXvS4BzZtLMxj1s3K2t31uOXABwNISPrBljVQDTcFFEopbrrdrFccqpKkepcKr24bzOaKAjBrT5QkAcdsrelWTeh5GgMRJmQN7Pbu2Z+pbWBQfDQiDS8xT4K9X38+cj+q87o0x89k5h4oZQRiXjnEIgVGSDLr6AgC7IgC7Ig/x3yW4ABAFzFn1mmK4c+AAAAAElFTkSuQmCC)" 
-				 data-name="Holografico" data-image="true"  on-click="{{selectColor}}"></span>
-				<hr/>
-				<span class="color" style="background:#b7cb54" data-color="#b7cb54" data-name="Verde fluor" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#f1cf55" data-color="#f1cf55" data-name="Naranja fluor" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#f6ea58" data-color="#f6ea58" data-name="Amarillo fluor" on-click="{{selectColor}}"></span>
-				<span class="color" style="background:#dd9dc1" data-color="#dd9dc1" data-name="Rosa fluor" on-click="{{selectColor}}"></span>
+			  <section>
+			  	<span class="color" style="background:#ffffff" data-color="#ffffff" data-name="Blanco" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#000000" data-color="#000000" data-name="Negro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#9b9b9b" data-color="#9b9b9b" data-name="Gris" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#cecfcf" data-color="#cecfcf" data-name="Gris claro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#626261" data-color="#626261" data-name="Gris oscuro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<hr/>
+			  	<span class="color" style="background:#faec37;" data-color="#faec37" data-name="Amarillo" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#fcf59e;" data-color="#fcf59e" data-name="Amarillo claro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#fbf061;" data-color="#fbf061" data-name="Amarillo medio" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#faec37;" data-color="#faec37" data-name="Amarillo fuerte" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#589de0;" data-color="#589de0" data-name="Azul" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#9bcef2;" data-color="#9bcef2" data-name="Azul claro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#86c0bb;" data-color="#86c0bb" data-name="Azul turquesa" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#5872b4;" data-color="#5872b4" data-name="Azul oscuro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#305593;" data-color="#305593" data-name="Azul ultramar" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#305593;" data-color="#305593" data-name="Azul marino" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#c10015" data-color="#c10015" data-name="Rojo" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#751302" data-color="#751302" data-name="Granate" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#d3721b" data-color="#d3721b" data-name="Naranja" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#dc9022" data-color="#dc9022" data-name="Naranja claro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#cd5919" data-color="#cd5919" data-name="Naranja fuerte" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#e7b035" data-color="#e7b035" data-name="Ambar dorado" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<hr/>
+			  	<span class="color" style="background:#68a23f" data-color="#68a23f" data-name="Verde" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#c9d231" data-color="#c9d231" data-name="Verde pistacho" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#8bb53a" data-color="#8bb53a" data-name="Verde hierba" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#48803d" data-color="#48803d" data-name="Verde navidad" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#67aa6a" data-color="#67aa6a" data-name="Verde oscuro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#86c0bb" data-color="#86c0bb" data-name="Verde turquesa" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#945799" data-color="#945799" data-name="Violeta" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#c1aad0" data-color="#c1aad0" data-name="Violeta claro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#49317c" data-color="#49317c" data-name="Violeta fuerte" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#c1aad0" data-color="#c1aad0" data-name="Lila" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#dd9dc1" data-color="#dd9dc1" data-name="Rosa" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#d06aa1" data-color="#d06aa1" data-name="Rosa fuerte" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#bf2b82" data-color="#bf2b82" data-name="Fuchsia" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#c40079" data-color="#c40079" data-name="Magenta" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#74524b" data-color="#74524b" data-name="Marrón" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#8e786d" data-color="#8e786d" data-name="Marrón claro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#74524b" data-color="#74524b" data-name="Marrón fuerte" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#5a471b" data-color="#5a471b" data-name="Chocolate" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background:#95502e" data-color="#95502e" data-name="Terracota" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#e9cd30" data-color="#e9cd30" data-name="Whisky" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background-image:linear-gradient(to bottom right, #989a99 0%, #c5c6c5 40%,#c5c6c5 60%, #989a99 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #989a99 0%, #c5c6c5 40%,#c5c6c5 60%, #989a99 100% )" data-name="Plata" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background-image:linear-gradient(to bottom right, #c1c2c4 0%, #e8eaec 40%,#e8eaec 60%, #c1c2c4 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #c1c2c4 0%, #e8eaec 40%,#e8eaec 60%, #c1c2c4 100% )" data-name="Plata brillo" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+		  		<span class="color" style="background-image:linear-gradient(to bottom right, #8d9496 0%, #b2babc 40%,#b2babc 60%, #8d9496 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #8d9496 0%, #b2babc 40%,#b2babc 60%, #8d9496 100% )" data-name="Plata Mate" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background:#ad4b2e" data-color="#ad4b2e" data-name="Bronce" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background-image:linear-gradient(to bottom right, #ad781c 0%, #dd9924 40%,#dd9924 60%, #ad781c 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #ad781c 0%, #dd9924 40%,#dd9924 60%, #ad781c 100% )" data-name="Cobre" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<hr/>
+			  	<span class="color" style="background:#dfb32a" data-color="#dfb32a" data-name="Ocre" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<hr/>
+			  	<span class="color" style="background-image:linear-gradient(to bottom right, #b8a865 0%, #e7d27e 40%,#e7d27e 60%, #b8a865 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #b8a865 0%, #e7d27e 40%,#e7d27e 60%, #b8a865 100% )" data-name="Oro" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#e9cd30" data-color="#e9cd30" data-name="Oro viejo" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+			  	<span class="color" style="background-image:linear-gradient(to bottom right, #b29b54 0%, #d8bb65 40%,#d8bb65 60%, #b29b54 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #b29b54 0%, #d8bb65 40%,#d8bb65 60%, #b29b54 100% )" data-name="Oro brillo" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>	
+			  	<hr/>
+			  	<span class="color" style="background-image:linear-gradient(to bottom right, #83743d 0%, #a08e4a 40%,#a08e4a 60%, #83743d 100% )" data-image="true"
+			  		data-color="linear-gradient(to bottom right, #83743d 0%, #a08e4a 40%,#a08e4a 60%, #83743d 100% )" data-name="Oro mate" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>	
+					<hr/>
+					<span class="color" style="background:#f3e8be" data-color="#f3e8be" data-name="Natural" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#f3e8be" data-color="#f3e8be" data-name="Marfil" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#f8e9d2" data-color="#f8e9d2" data-name="Crema" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#f2d5b6" data-color="#f2d5b6" data-name="Salmón" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#eee6d0" data-color="#eee6d0" data-name="Vainilla" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#edc7a2" data-color="#edc7a2" data-name="Carne" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#8e786d" data-color="#8e786d" data-name="Avellana" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<hr/>
+					<span class="color" style="background-image:linear-gradient(to right, #c73a18 0%, #f9ea37 20%,#bccc30 40%, #9cceef 60%, #363386 80%, #b4007b 100% )" data-image="true"
+			  		data-color="linear-gradient(to right, #c73a18 0%, #f9ea37 20%,#bccc30 40%, #9cceef 60%, #363386 80%, #b4007b 100% )" data-name="Arcoiris" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<hr/>
+					<span class="color" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDY1MDk2RkFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDY1MDk3MEFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENjUwOTZEQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENjUwOTZFQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b2m0NQAAAVtJREFUeNrslstOwzAQRe2xnTYk4aFW/P+PIHZ8BhIbEAv6wiqt7RkzDuqiiZG6IRKSZ5FNxj6e6yj3yseHJ1OpuqlAyUhRXFCmMruNfXl+227XeoZC8CopLi49rw3DJC+JUUxSum4Ms2IqMRGSaCrUqUBMXgVZkAVZkAX5h06i1K/U5KI56zVGKQ0A6T0/f3oHPcR2n0wxhzwefJYXk2fHrG97Ew77Y/CIGIWnbCqAdCTIiqjfX3fZ+YIPznnCMD4q7+acs5/2sHdk0zR9qjjNR8QNXdfVbXvS4BzZtLMxj1s3K2t31uOXABwNISPrBljVQDTcFFEopbrrdrFccqpKkepcKr24bzOaKAjBrT5QkAcdsrelWTeh5GgMRJmQN7Pbu2Z+pbWBQfDQiDS8xT4K9X38+cj+q87o0x89k5h4oZQRiXjnEIgVGSDLr6AgC7IgC7Ig/x3yW4ABAFzFn1mmK4c+AAAAAElFTkSuQmCC)"
+					 data-color="url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDY1MDk2RkFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDY1MDk3MEFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENjUwOTZEQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENjUwOTZFQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b2m0NQAAAVtJREFUeNrslstOwzAQRe2xnTYk4aFW/P+PIHZ8BhIbEAv6wiqt7RkzDuqiiZG6IRKSZ5FNxj6e6yj3yseHJ1OpuqlAyUhRXFCmMruNfXl+227XeoZC8CopLi49rw3DJC+JUUxSum4Ms2IqMRGSaCrUqUBMXgVZkAVZkAX5h06i1K/U5KI56zVGKQ0A6T0/f3oHPcR2n0wxhzwefJYXk2fHrG97Ew77Y/CIGIWnbCqAdCTIiqjfX3fZ+YIPznnCMD4q7+acs5/2sHdk0zR9qjjNR8QNXdfVbXvS4BzZtLMxj1s3K2t31uOXABwNISPrBljVQDTcFFEopbrrdrFccqpKkepcKr24bzOaKAjBrT5QkAcdsrelWTeh5GgMRJmQN7Pbu2Z+pbWBQfDQiDS8xT4K9X38+cj+q87o0x89k5h4oZQRiXjnEIgVGSDLr6AgC7IgC7Ig/x3yW4ABAFzFn1mmK4c+AAAAAElFTkSuQmCC)" 
+					 data-name="Holografico" data-image="true"  on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<hr/>
+					<span class="color" style="background:#b7cb54" data-color="#b7cb54" data-name="Verde fluor" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#f1cf55" data-color="#f1cf55" data-name="Naranja fluor" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#f6ea58" data-color="#f6ea58" data-name="Amarillo fluor" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+					<span class="color" style="background:#dd9dc1" data-color="#dd9dc1" data-name="Rosa fluor" on-click="{{selectColor}}" on-mouseover="{{showTooltip}}" on-mouseout="{{hideTooltip}}"></span>
+				<section>
+				<footer id="info">
+						<div id="tooltip"></div>
+				</footer>
 		  </div>
 	  </div>
   </template>
