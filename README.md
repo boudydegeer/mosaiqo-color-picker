@@ -45,3 +45,12 @@ Create an `index.html` file and paste in this code
 Thats it!!!
 
 Enjoy
+
+
+### Changelog
+
++ version 0.2.0
+  * Now you can search for a color name
+  * Updated the styles
+  * Added new tooltip for mouse over a color
+  * Changed Chevron color in function of the background color
