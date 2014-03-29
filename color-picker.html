@@ -1,77 +1,8 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
 <polymer-element name="mosaiqo-color-picker" attributes="color name image" noscript>
   <template>
   	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	  <style type="text/css">
-	  	:host #colorPicker
-	  	{
-				max-width: 250px;
-				position: absolute;
-				display: inline-block;
-	  	}
-			:host #input
-			{
-				border : 1px solid #ccc;
-				border-radius: 3px;
-				display:block;
-			}
-			:host #input input
-			{
-				font-family: verdana;
-				min-width: 200px;
-				font-size: 16px;
-				padding: 10px 5px;
-				border: none;
-				display: inline-block;
-				vertical-align: top;
-			}
-			:host #input button
-			{
-				margin: 0;
-				display: inline-block;
-				padding-top: 5px;
-				background-color: #ffffff;
-				min-height:100%;
-				height:44px;
-				min-width:38px;
-				border: 1px solid #ccc;
-				top: 0;
-			}
-			:host #picker
-			{
-				background-color: #fff;
-				position:absolute;
-				min-width: 242px ;
-				min-height: 150px ;
-				max-height: 250px ;
-				overflow-y: scroll;
-				border: 1px solid #ccc;
-				transition: 0.5s all;
-			}
+  	<link rel="stylesheet" type="text/css" href="./styles/css/color-picker.css">
 
-			:host #picker.closed
-			{
-				border: none;
-				min-height: 0;
-				height: 0px;
-				transition: 0.5s all;
-				overflow: hidden;
-			}
-			:host #picker hr{
-				margin : 1px;
-			}
-			:host #picker .color{
-				display: inline-block;
-				background-image: url("images/holografic.png");
-				background-repeat: no-repeat;
-				background-size: 100%;
-				margin: 1px;
-				background-color: #cc0000;
-				min-height:15px;
-				min-width:15px;
-				border: 1px solid #ccc;
-			};
-		</style>
 		<div id="colorPicker">
 		  <div id="input">
 		  	<input id="colorName" type="text" value="{{name}}" name="colorName" on-keyup="{{onKeyUp}}"/> 
@@ -79,6 +10,7 @@
 		  		<input type="hidden" name="color" id="colorValue" value=""/>
 		  	</button>
 		  </div>
+
 		  <div id="picker" class="closed">
 		  	<span class="color" style="background:white" data-color="white" data-name="Blanco" on-click="{{selectColor}}"></span>
 		  	<hr/>
@@ -167,7 +99,9 @@
 				<span class="color" style="background-image:linear-gradient(to right, #c73a18 0%, #f9ea37 20%,#bccc30 40%, #9cceef 60%, #363386 80%, #b4007b 100% )" data-image="true"
 		  		data-color="linear-gradient(to right, #c73a18 0%, #f9ea37 20%,#bccc30 40%, #9cceef 60%, #363386 80%, #b4007b 100% )" data-name="Arcoiris" on-click="{{selectColor}}"></span>
 				<hr/>
-				<span class="color" style="background-image:url('images/holografic.png') " data-color="url('/color-picker/images/holografic.png')" data-name="Holografico" data-image="true"  on-click="{{selectColor}}"></span>
+				<span class="color" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDY1MDk2RkFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDY1MDk3MEFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENjUwOTZEQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENjUwOTZFQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b2m0NQAAAVtJREFUeNrslstOwzAQRe2xnTYk4aFW/P+PIHZ8BhIbEAv6wiqt7RkzDuqiiZG6IRKSZ5FNxj6e6yj3yseHJ1OpuqlAyUhRXFCmMruNfXl+227XeoZC8CopLi49rw3DJC+JUUxSum4Ms2IqMRGSaCrUqUBMXgVZkAVZkAX5h06i1K/U5KI56zVGKQ0A6T0/f3oHPcR2n0wxhzwefJYXk2fHrG97Ew77Y/CIGIWnbCqAdCTIiqjfX3fZ+YIPznnCMD4q7+acs5/2sHdk0zR9qjjNR8QNXdfVbXvS4BzZtLMxj1s3K2t31uOXABwNISPrBljVQDTcFFEopbrrdrFccqpKkepcKr24bzOaKAjBrT5QkAcdsrelWTeh5GgMRJmQN7Pbu2Z+pbWBQfDQiDS8xT4K9X38+cj+q87o0x89k5h4oZQRiXjnEIgVGSDLr6AgC7IgC7Ig/x3yW4ABAFzFn1mmK4c+AAAAAElFTkSuQmCC)"
+				 data-color="url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDY1MDk2RkFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDY1MDk3MEFFRjMxMUUzODM2Q0Y5MERCOEY1N0JCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENjUwOTZEQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENjUwOTZFQUVGMzExRTM4MzZDRjkwREI4RjU3QkJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+b2m0NQAAAVtJREFUeNrslstOwzAQRe2xnTYk4aFW/P+PIHZ8BhIbEAv6wiqt7RkzDuqiiZG6IRKSZ5FNxj6e6yj3yseHJ1OpuqlAyUhRXFCmMruNfXl+227XeoZC8CopLi49rw3DJC+JUUxSum4Ms2IqMRGSaCrUqUBMXgVZkAVZkAX5h06i1K/U5KI56zVGKQ0A6T0/f3oHPcR2n0wxhzwefJYXk2fHrG97Ew77Y/CIGIWnbCqAdCTIiqjfX3fZ+YIPznnCMD4q7+acs5/2sHdk0zR9qjjNR8QNXdfVbXvS4BzZtLMxj1s3K2t31uOXABwNISPrBljVQDTcFFEopbrrdrFccqpKkepcKr24bzOaKAjBrT5QkAcdsrelWTeh5GgMRJmQN7Pbu2Z+pbWBQfDQiDS8xT4K9X38+cj+q87o0x89k5h4oZQRiXjnEIgVGSDLr6AgC7IgC7Ig/x3yW4ABAFzFn1mmK4c+AAAAAElFTkSuQmCC)" 
+				 data-name="Holografico" data-image="true"  on-click="{{selectColor}}"></span>
 				<hr/>
 				<span class="color" style="background:#b7cb54" data-color="#b7cb54" data-name="Verde fluor" on-click="{{selectColor}}"></span>
 				<span class="color" style="background:#f1cf55" data-color="#f1cf55" data-name="Naranja fluor" on-click="{{selectColor}}"></span>
@@ -176,62 +110,5 @@
 		  </div>
 	  </div>
   </template>
-	<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script> -->
-	<!-- <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
-	<script>
-		Polymer('mosaiqo-color-picker', {
-			image : false,
-			name : "",
-			color : "white",
-			closed : true,
-			ready: function() 
-			{
-				if(this.image)
-					this.setImage(this.color)	
-				else
-					this.setColor(this.color)
-
-				this.$.colorName.value = this.name;
-			},
-			onKeyUp: function( event )
-			{
-				colorName = this.$.colorName
-				this.$.currentColor.style.backgroundColor = colorName.value;
-			},
-			showPicker: function( event )
-			{
-				var picker = this.$.picker;
-				if(this.closed)
-				{
-					picker.classList.remove("closed");
-					this.closed = false;
-				}
-				else
-				{
-					picker.classList.add("closed");
-					this.closed = true;
-				}
-			},
-			selectColor: function( event )
-			{
-				var image = event.target.getAttribute("data-image");
-				var color = event.target.getAttribute("data-color");
-				var name = event.target.getAttribute("data-name");
-				if(image == "true")
-					this.setBackground( color );
-				else
-					this.setColor( color );
-				
-				this.$.colorName.value = name;
-			},
-			setColor : function ( color )
-			{
-				this.$.currentColor.style.background = color;
-			},
-			setBackground : function ( color )
-			{
-				this.$.currentColor.style.backgroundImage = color;
-			}
-		});
-	</script>
+	<script src="./scripts/js/color-picker.js"></script>
 </polymer-element>
